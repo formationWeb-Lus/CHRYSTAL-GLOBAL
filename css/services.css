@@ -1,0 +1,590 @@
+/*=========================================
+    CHRYSTAL OVERALL COMPANY
+    SERVICES PAGE
+==========================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f9fc;
+    color:#333;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1250px;
+    margin:auto;
+}
+
+/*=========================
+        COLORS
+=========================*/
+
+:root{
+
+    --primary:#0A2342;
+    --secondary:#D4AF37;
+    --white:#fff;
+    --text:#666;
+    --light:#f5f7fb;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+/*=========================
+        HEADER
+=========================*/
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    background:rgba(10,35,66,.96);
+
+    backdrop-filter:blur(12px);
+
+    z-index:999;
+
+}
+
+.header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:60px;
+
+}
+
+.logo h2{
+
+    color:white;
+
+    font-size:20px;
+
+}
+
+.logo span{
+
+    color:var(--secondary);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+}
+
+.navbar ul{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:white;
+
+    font-weight:500;
+
+    position:relative;
+
+    transition:.3s;
+
+}
+
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--secondary);
+
+    transition:.3s;
+
+}
+
+.navbar a:hover::after,
+.navbar .active::after{
+
+    width:100%;
+
+}
+
+.navbar a:hover{
+
+    color:var(--secondary);
+
+}
+
+/*=========================
+        HERO
+=========================*/
+
+.service-hero{
+
+    position:relative;
+
+    height:70vh;
+
+    background:
+    linear-gradient(rgba(8,31,63,.75),
+    rgba(8,31,63,.75)),
+    url("../images/heror.jpg") center/cover;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+
+    margin-top:90px;
+
+}
+
+.hero-content{
+
+    max-width:900px;
+
+    padding:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}
+
+/*=========================
+        INTRO
+=========================*/
+
+.intro{
+
+    padding:100px 0;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.intro h5{
+
+    color:var(--secondary);
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+
+}
+
+.intro h2{
+
+    font-size:45px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.intro p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:var(--text);
+
+    line-height:1.9;
+
+}
+
+/*=========================
+        SERVICES
+=========================*/
+
+.services{
+
+    padding:100px 0;
+
+    background:var(--light);
+
+}
+
+.service-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:.4s;
+
+    border-top:5px solid transparent;
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:var(--secondary);
+
+}
+
+.card i{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    background:var(--secondary);
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    margin-bottom:25px;
+
+}
+
+.card h3{
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+    font-size:24px;
+
+}
+
+.card p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/*=========================
+        PROCESS
+=========================*/
+
+.process{
+
+    padding:100px 0;
+
+    background:white;
+
+    text-align:center;
+
+}
+
+.process h5{
+
+    color:var(--secondary);
+
+    letter-spacing:3px;
+
+}
+
+.process h2{
+
+    font-size:42px;
+
+    margin:20px 0 60px;
+
+    color:var(--primary);
+
+}
+
+.steps{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.step{
+
+    background:#f7f9fc;
+
+    padding:40px;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.step span{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:var(--secondary);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.step h3{
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+.step p{
+
+    color:var(--text);
+
+    line-height:1.8;
+
+}
+
+/*=========================
+        CTA
+=========================*/
+
+.cta{
+
+    background:linear-gradient(135deg,#0A2342,#163b68);
+
+    color:white;
+
+    text-align:center;
+
+    padding:100px 20px;
+
+}
+
+.cta h2{
+
+    font-size:45px;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    font-size:19px;
+
+    margin-bottom:35px;
+
+}
+
+.cta a{
+
+    display:inline-block;
+
+    padding:18px 45px;
+
+    background:var(--secondary);
+
+    color:#111;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.cta a:hover{
+
+    transform:translateY(-5px);
+
+    background:#c89b24;
+
+}
+
+/*=========================
+        FOOTER
+=========================*/
+
+footer{
+
+    background:#081F3F;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/*=========================
+        RESPONSIVE
+=========================*/
+
+@media(max-width:992px){
+
+.hero-content h1{
+
+font-size:50px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
+
+}
+@media(max-width:768px){
+
+.hero-content h1{
+
+font-size:35px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+.about-text h2{
+
+font-size:34px;
+
+}
+
+.about-list{
+
+grid-template-columns:1fr;
+
+}
+
+}

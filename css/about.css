@@ -1,0 +1,420 @@
+/*=====================================================
+        ABOUT PAGE
+        CHRYSTAL OVERALL COMPANY
+======================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/*============ RESET ============*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f7f9fc;
+    color:#333;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/*============ COLORS ============*/
+
+:root{
+
+    --primary:#0A2342;
+    --secondary:#D4AF37;
+    --white:#ffffff;
+    --text:#5d6675;
+    --light:#f8fafc;
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+    --radius:20px;
+
+}
+
+/*============ HEADER ============*/
+
+.header{
+
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(10,35,66,.95);
+    backdrop-filter:blur(12px);
+    z-index:9999;
+
+}
+
+.header .container{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.logo img{
+
+    width:60px;
+
+}
+
+.logo h2{
+
+    color:white;
+    font-size:20px;
+
+}
+
+.logo span{
+
+    color:var(--secondary);
+    font-size:12px;
+    letter-spacing:2px;
+
+}
+
+.navbar ul{
+
+    display:flex;
+    gap:35px;
+
+}
+
+.navbar a{
+
+    color:white;
+    transition:.3s;
+    position:relative;
+    font-weight:500;
+
+}
+
+.navbar a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:0;
+    height:3px;
+    background:var(--secondary);
+    transition:.4s;
+
+}
+
+.navbar a:hover::after,
+.navbar .active::after{
+
+    width:100%;
+
+}
+
+.navbar a:hover{
+
+    color:var(--secondary);
+
+}
+
+/*============ HERO ============*/
+
+.about-hero{
+
+    position:relative;
+    height:100vh;
+    background:url("../images/heror.jpg") center center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    overflow:hidden;
+
+}
+
+.about-hero::before{
+
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        rgba(8,31,63,.82),
+        rgba(8,31,63,.72)
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:5;
+    color:white;
+    max-width:900px;
+    padding:20px;
+
+}
+
+.hero-content span{
+
+    color:var(--secondary);
+    font-size:17px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+
+}
+
+.hero-content h1{
+
+    font-size:70px;
+    font-weight:800;
+    margin:25px 0;
+    line-height:1.1;
+
+}
+
+.hero-content p{
+
+    font-size:21px;
+    color:#ececec;
+    line-height:1.8;
+
+}
+
+/*============ ABOUT COMPANY ============*/
+
+.about-company{
+
+    padding:120px 0;
+    background:white;
+
+}
+
+.about-company .container{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+}
+
+.about-image{
+
+    overflow:hidden;
+    border-radius:25px;
+    box-shadow:var(--shadow);
+
+}
+
+.about-image img{
+
+    transition:.6s;
+
+}
+
+.about-image:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.about-text h5{
+
+    color:var(--secondary);
+    letter-spacing:3px;
+    margin-bottom:15px;
+
+}
+
+.about-text h2{
+
+    font-size:48px;
+    color:var(--primary);
+    margin-bottom:25px;
+    line-height:1.2;
+
+}
+
+.about-text p{
+
+    color:var(--text);
+    line-height:2;
+    margin-bottom:35px;
+
+}
+
+/*============ LIST ============*/
+
+.about-list{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+.about-list div{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-weight:600;
+
+}
+
+.about-list i{
+
+    width:35px;
+    height:35px;
+    background:var(--secondary);
+    color:white;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/*============ MISSION ============*/
+
+.mission{
+
+    padding:100px 0;
+    background:#f5f7fb;
+
+}
+
+.mission .container{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+
+}
+
+.box{
+
+    background:white;
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.4s;
+
+}
+
+.box:hover{
+
+    transform:translateY(-12px);
+
+}
+
+.box i{
+
+    width:90px;
+    height:90px;
+    margin:auto;
+    margin-bottom:30px;
+    border-radius:50%;
+    background:var(--secondary);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:34px;
+
+}
+
+.box h3{
+
+    color:var(--primary);
+    font-size:30px;
+    margin-bottom:20px;
+
+}
+
+.box p{
+
+    color:var(--text);
+    line-height:1.9;
+
+}
+
+/*============ RESPONSIVE ============*/
+
+@media(max-width:992px){
+
+.about-company .container,
+.mission .container{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-content h1{
+
+font-size:48px;
+
+}
+
+}
+@media(max-width:768px){
+
+.hero-content h1{
+
+font-size:35px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+.about-text h2{
+
+font-size:34px;
+
+}
+
+.about-list{
+
+grid-template-columns:1fr;
+
+}
+
+}
