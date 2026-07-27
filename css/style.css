@@ -269,9 +269,11 @@ a{
 
     inset:0;
 
-    background:radial-gradient(circle,
-    rgba(255,255,255,.05),
-    transparent 70%);
+    background:rgba(0,0,0,.15);
+
+    z-index:1;
+
+    pointer-events:none;
 
 }
 
